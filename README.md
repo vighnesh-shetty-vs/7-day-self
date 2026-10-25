@@ -1,44 +1,56 @@
-# Day 2 — HTTP, REST APIs and JSON
+# Backend and AI Integrations Learning Project
 
-This project covers Day 2 of a backend and AI integrations learning plan. The goal is to understand how a Python program communicates with an external application through an HTTP API and works with the JSON response.
+This repository contains hands-on exercises for preparing for backend and AI integrations work at StackMint. The project follows a practical learning approach: understand a concept, write code, test it, handle failures, and document what was built.
 
-## What this project demonstrates
+The learning plan covers API integration, backend services, reusable connectors, testing, webhooks, OAuth, AI tool calling, MCP, and a final integration project. This repository is being developed for **Days 2, 4, 5, 6, and 7**; it does not include a Day 3 exercise.
 
-- Sending a `GET` request to the JSONPlaceholder users API with Python Requests.
-- Checking the HTTP response status and handling request errors.
-- Using a query parameter (`id`) to retrieve a specific user.
-- Parsing the response as JSON and handling an unknown user ID.
-- Displaying only the requested user's name and address fields.
-- Transforming user records and saving the selected fields to `users.json`.
+## Current project contents
 
-The learning plan also introduces the request-response cycle, HTTP methods, headers, query parameters, status codes, and JSON as a data-exchange format. This exercise specifically implements GET requests.
+- [`day_2/`](./day_2/) — HTTP, REST APIs, Requests, and JSON.
+- [`day_4/`](./day_4/) — a reusable CRM connector with request and response validation.
 
-## Run the exercise
+Folders for the remaining selected days can be added as those activities are completed.
 
-Install the dependency:
+## Prerequisites
+
+- Python 3
+- `pip`
+- Internet access for the JSONPlaceholder API exercises
+
+Install the dependency used by the current exercises:
 
 ```bash
 python -m pip install requests
 ```
 
-Run the script from the `day_2` folder:
+## Run the exercises
+
+From the repository root, open a terminal in `day_2` and run:
 
 ```bash
 cd day_2
 python API_call.py
 ```
 
-Choose an operation when prompted:
+In a separate terminal from the repository root, run the Day 4 connector:
 
-1. Search for a user by ID.
-2. Transform and save all users' names and addresses to `users.json`.
-3. Show all users returned by the data source.
+```bash
+cd day_4
+python crm_connector.py
+```
 
-The data source is [JSONPlaceholder](https://jsonplaceholder.typicode.com/users), a mock API for learning and testing.
+The Day 2 program prompts you to choose whether to search for a user by ID, save users' names and addresses to JSON, or display all users. The Day 4 program retrieves a customer record from JSONPlaceholder and reports network, HTTP, or response-validation errors.
 
-## Project files
+## Growing the repository
 
-- `day_2/API_call.py` — fetches users, displays them, searches by ID, and transforms/saves the selected fields.
-- `day_2/users.json` — sample output containing user names and address fields.
+Add new work in the matching day folder, for example `day_5/` or `day_6/`. Git tracks files rather than empty directories, so put a file such as `README.md` or `.gitkeep` in a new folder.
 
-New files and folders can be added to this repository over time. Git includes new files when they are staged (for example, with `git add -A`); empty folders need a placeholder file such as `.gitkeep` to be stored.
+To stage new and updated files, then commit and push them:
+
+```bash
+git add -A
+git commit -m "Describe the completed work"
+git push
+```
+
+See each day folder's README for its objective and activities.
