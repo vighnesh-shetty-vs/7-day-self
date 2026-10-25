@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Leanne Graham",
+        "address": {
+            "suite": "Apt. 556",
+            "street": "Kulas Light",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874"
+        }
+    },
+    {
+        "name": "Ervin Howell",
+        "address": {
+            "suite": "Suite 879",
+            "street": "Victor Plains",
+            "city": "Wisokyburgh",
+            "zipcode": "90566-7771"
+        }
+    },
+    {
+        "name": "Clementine Bauch",
+        "address": {
+            "suite": "Suite 847",
+            "street": "Douglas Extension",
+            "city": "McKenziehaven",
+            "zipcode": "59590-4157"
+        }
+    },
+    {
+        "name": "Patricia Lebsack",
+        "address": {
+            "suite": "Apt. 692",
+            "street": "Hoeger Mall",
+            "city": "South Elvis",
+            "zipcode": "53919-4257"
+        }
+    },
+    {
+        "name": "Chelsey Dietrich",
+        "address": {
+            "suite": "Suite 351",
+            "street": "Skiles Walks",
+            "city": "Roscoeview",
+            "zipcode": "33263"
+        }
+    },
+    {
+        "name": "Mrs. Dennis Schulist",
+        "address": {
+            "suite": "Apt. 950",
+            "street": "Norberto Crossing",
+            "city": "South Christy",
+            "zipcode": "23505-1337"
+        }
+    },
+    {
+        "name": "Kurtis Weissnat",
+        "address": {
+            "suite": "Suite 280",
+            "street": "Rex Trail",
+            "city": "Howemouth",
+            "zipcode": "58804-1099"
+        }
+    },
+    {
+        "name": "Nicholas Runolfsdottir V",
+        "address": {
+            "suite": "Suite 729",
+            "street": "Ellsworth Summit",
+            "city": "Aliyaview",
+            "zipcode": "45169"
+        }
+    },
+    {
+        "name": "Glenna Reichert",
+        "address": {
+            "suite": "Suite 449",
+            "street": "Dayna Park",
+            "city": "Bartholomebury",
+            "zipcode": "76495-3109"
+        }
+    },
+    {
+        "name": "Clementina DuBuque",
+        "address": {
+            "suite": "Suite 198",
+            "street": "Kattie Turnpike",
+            "city": "Lebsackbury",
+            "zipcode": "31428-2261"
+        }
+    }
+]
