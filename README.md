@@ -21,9 +21,10 @@ Install the dependency:
 python -m pip install requests
 ```
 
-Run the script from the project root:
+Run the script from the `day_2` folder:
 
 ```bash
+cd day_2
 python API_call.py
 ```
 
@@ -37,8 +38,7 @@ The data source is [JSONPlaceholder](https://jsonplaceholder.typicode.com/users)
 
 ## Project files
 
-- `API_call.py` — fetches users, displays them, searches by ID, and transforms/saves the selected fields.
-- `users.json` — sample output containing user names and address fields.
-- `day_2/` — reserved for Day 2 materials added as the project grows.
+- `day_2/API_call.py` — fetches users, displays them, searches by ID, and transforms/saves the selected fields.
+- `day_2/users.json` — sample output containing user names and address fields.
 
 New files and folders can be added to this repository over time. Git includes new files when they are staged (for example, with `git add -A`); empty folders need a placeholder file such as `.gitkeep` to be stored.
