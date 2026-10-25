@@ -25,7 +25,7 @@ python -m pip install requests
 
 ## Run the exercises
 
-From the repository root, open a terminal in `day_2` and run:
+From the repository root, run the Day 2 exercise:
 
 ```bash
 cd day_2
