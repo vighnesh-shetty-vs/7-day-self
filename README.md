@@ -8,8 +8,15 @@ The learning plan covers API integration, backend services, reusable connectors,
 
 - [`day_2/`](./day_2/) — HTTP, REST APIs, Requests, and JSON.
 - [`day_4/`](./day_4/) — a reusable CRM connector with request and response validation.
+- [`day_5/`](./day_5/) — testing, debugging, and reliability exercises for
+  the CRM connector. Includes pytest coverage for successful responses,
+  request configuration, HTTP errors, invalid JSON, and invalid customer
+  data, plus a standalone `unittest` version. Tests use mocked responses and
+  require no network access. Authentication, pagination, schema evolution,
+  and rate-limit integration scenarios remain future work; see the
+  [Day 5 guide](./day_5/README.md) for commands, files, and current results.
 
-Folders for the remaining selected days can be added as those activities are completed.
+Folders for Days 6 and 7 can be added as those activities are completed.
 
 ## Prerequisites
 
@@ -40,6 +47,12 @@ python crm_connector.py
 ```
 
 The Day 2 program prompts you to choose whether to search for a user by ID, save users' names and addresses to JSON, or display all users. The Day 4 program retrieves a customer record from JSONPlaceholder and reports network, HTTP, or response-validation errors.
+
+Run the Day 5 CRM connector tests from the repository root with:
+
+```bash
+python -m pytest day_5/test_crm_connector.py day_5/test_crm_connector_standalone.py -q
+```
 
 ## Growing the repository
 

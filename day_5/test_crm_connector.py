@@ -27,7 +27,9 @@ def test_get_customer_requests_and_returns_customer(monkeypatch):
         "name": "Ada Lovelace",
         "email": "ada@example.com",
     }
-    get.assert_called_once_with("https://crm.example.com/users/42", timeout=10)
+    get.assert_called_once_with(
+        "https://crm.example.com/now/users/42", timeout=10
+    )
     response.raise_for_status.assert_called_once_with()
 
 
