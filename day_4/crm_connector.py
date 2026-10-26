@@ -55,27 +55,30 @@ class CRMConnector:
         }
 
 
-crm = CRMConnector(
-    "https://jsonplaceholder.typicode.com"
-)
+def main():
+    crm = CRMConnector("https://jsonplaceholder.typicode.com")
 
-try:
-    customer = crm.get_customer(1)
-except requests.exceptions.Timeout as error:
-    print(f"Network timeout while retrieving customer: {error}")
-    raise SystemExit(1) from error
-except requests.exceptions.ConnectionError as error:
-    print(f"Network connection failed while retrieving customer: {error}")
-    raise SystemExit(1) from error
-except requests.exceptions.HTTPError as error:
-    status_code = error.response.status_code if error.response is not None else "unknown"
-    print(f"HTTP error {status_code} while retrieving customer: {error}")
-    raise SystemExit(1) from error
-except requests.exceptions.RequestException as error:
-    print(f"Request failed while retrieving customer: {error}")
-    raise SystemExit(1) from error
-except APIResponseValidationError as error:
-    print(f"Invalid customer data received from the API: {error}")
-    raise SystemExit(1) from error
+    try:
+        customer = crm.get_customer(1)
+    except requests.exceptions.Timeout as error:
+        print(f"Network timeout while retrieving customer: {error}")
+        raise SystemExit(1) from error
+    except requests.exceptions.ConnectionError as error:
+        print(f"Network connection failed while retrieving customer: {error}")
+        raise SystemExit(1) from error
+    except requests.exceptions.HTTPError as error:
+        status_code = error.response.status_code if error.response is not None else "unknown"
+        print(f"HTTP error {status_code} while retrieving customer: {error}")
+        raise SystemExit(1) from error
+    except requests.exceptions.RequestException as error:
+        print(f"Request failed while retrieving customer: {error}")
+        raise SystemExit(1) from error
+    except APIResponseValidationError as error:
+        print(f"Invalid customer data received from the API: {error}")
+        raise SystemExit(1) from error
 
-print(customer)
+    print(customer)
+
+
+if __name__ == "__main__":
+    main()
