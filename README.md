@@ -8,13 +8,7 @@ The learning plan covers API integration, backend services, reusable connectors,
 
 - [`day_2/`](./day_2/) — HTTP, REST APIs, Requests, and JSON.
 - [`day_4/`](./day_4/) — a reusable CRM connector with request and response validation.
-- [`day_5/`](./day_5/) — testing, debugging, and reliability exercises for
-  the CRM connector. Includes pytest coverage for successful responses,
-  request configuration, HTTP errors, invalid JSON, and invalid customer
-  data, plus a standalone `unittest` version. Tests use mocked responses and
-  require no network access. Authentication, pagination, schema evolution,
-  and rate-limit integration scenarios remain future work; see the
-  [Day 5 guide](./day_5/README.md) for commands, files, and current results.
+- [`day_5/`](./day_5/) — CRM connector testing, debugging, and reliability.
 
 Folders for Days 6 and 7 can be added as those activities are completed.
 
