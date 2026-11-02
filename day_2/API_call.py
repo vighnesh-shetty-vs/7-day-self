@@ -6,6 +6,7 @@ import requests
 URL = "https://jsonplaceholder.typicode.com/users"
 
 
+# Retrieve users from the API, optionally filtered by ID.
 def fetch_users(user_id=None):
     params = {"id": user_id} if user_id is not None else None
     try:
@@ -22,6 +23,7 @@ def fetch_users(user_id=None):
     return users
 
 
+# Find and display a user with the requested ID.
 def search_user_by_id(user_id):
     users = fetch_users(user_id)
     if users is None:
@@ -33,6 +35,7 @@ def search_user_by_id(user_id):
     show_users(users)
 
 
+# Keep only the name and address details for each user.
 def transform_user_data(users):
     return [
         {
@@ -48,6 +51,7 @@ def transform_user_data(users):
     ]
 
 
+# Save the simplified user details to a JSON file.
 def save_results_to_json(users):
     transformed_users = transform_user_data(users)
     users_json = json.dumps(transformed_users, indent=4)
@@ -56,6 +60,7 @@ def save_results_to_json(users):
     print("Results saved to users.json")
 
 
+# Print each user's name and address.
 def show_users(users):
     print("Users names and addresses:")
     print("-----------------")
@@ -67,12 +72,14 @@ def show_users(users):
         )
 
 
+# Fetch and display every user from the API.
 def show_all_source_data():
     users = fetch_users()
     if users is not None:
         show_users(users)
 
 
+# Ask the user what data task to run and perform it.
 def main():
     print("Select an operation:")
     print("1. Search for a user by ID")

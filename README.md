@@ -2,15 +2,16 @@
 
 This repository contains hands-on exercises for preparing for backend and AI integrations work at StackMint. The project follows a practical learning approach: understand a concept, write code, test it, handle failures, and document what was built.
 
-The learning plan covers API integration, backend services, reusable connectors, testing, webhooks, OAuth, AI tool calling, MCP, and a final integration project. This repository is being developed for **Days 2, 4, 5, 6, and 7**; it does not include a Day 3 exercise.
+The learning plan covers API integration, backend services, reusable connectors, testing, webhooks, OAuth, AI tool calling, MCP, and a final integration project. This repository contains work for **Days 2 through 7**; it does not include a Day 3 exercise.
 
 ## Current project contents
 
 - [`day_2/`](./day_2/) — HTTP, REST APIs, Requests, and JSON.
 - [`day_4/`](./day_4/) — a reusable CRM connector with request and response validation.
 - [`day_5/`](./day_5/) — CRM connector testing, debugging, and reliability.
-
-Folders for Days 6 and 7 can be added as those activities are completed.
+- [`day_6/`](./day_6/) — webhook exercise.
+- [`day_7/`](./day_7/) — AI support ticket integration capstone with a local
+  connector, FastAPI service, rule-based classification, webhook, and tests.
 
 ## Prerequisites
 
@@ -18,7 +19,7 @@ Folders for Days 6 and 7 can be added as those activities are completed.
 - `pip`
 - Internet access for the JSONPlaceholder API exercises
 
-Install the dependency used by the current exercises:
+Install the dependencies used by the earlier exercises:
 
 ```bash
 python -m pip install requests
@@ -47,6 +48,12 @@ Run the Day 5 CRM connector tests from the repository root with:
 ```bash
 python -m pytest day_5/test_crm_connector.py day_5/test_crm_connector_standalone.py -q
 ```
+
+For the complete Day 7 capstone setup, API examples, webhook, tests, and demo
+outline, see [`day_7/README.md`](./day_7/README.md). Install its dependencies
+with `python -m pip install -r day_7/requirements.txt`, run the API with
+`uvicorn day_7.app:app --reload`, and run its tests with
+`python -m pytest day_7 -q`.
 
 ## Growing the repository
 

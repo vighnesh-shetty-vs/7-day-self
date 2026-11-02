@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1001,
+    "subject": "Refund for duplicate charge",
+    "description": "I was charged twice for my monthly subscription and need a refund.",
+    "customer_email": "maya@example.com",
+    "status": "open"
+  },
+  {
+    "id": 1002,
+    "subject": "Cannot sign in",
+    "description": "The password reset link expired and I cannot access my account.",
+    "customer_email": "leo@example.com",
+    "status": "pending"
+  },
+  {
+    "id": 1003,
+    "subject": "Dashboard keeps loading",
+    "description": "The application dashboard returns an error and never finishes loading.",
+    "customer_email": "sam@example.com",
+    "status": "open"
+  },
+  {
+    "id": 1004,
+    "subject": "Update account email",
+    "description": "Please help me change the email address on my profile.",
+    "customer_email": "nina@example.com",
+    "status": "closed"
+  },
+  {
+    "id": 1005,
+    "subject": "Question about invoice",
+    "description": "Could you explain the tax line on my latest invoice?",
+    "customer_email": "omar@example.com",
+    "status": "pending"
+  }
+]

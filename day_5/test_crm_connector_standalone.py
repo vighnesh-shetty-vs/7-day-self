@@ -9,9 +9,11 @@ class APIResponseValidationError(ValueError):
 
 
 class CRMConnector:
+    # Save the API address used for customer requests.
     def __init__(self, base_url):
         self.base_url = base_url.rstrip("/")
 
+    # Retrieve one customer and reject incomplete or incorrect data.
     def get_customer(self, customer_id):
         url = f"{self.base_url}/users/{customer_id}"
 
@@ -59,15 +61,18 @@ class CRMConnector:
 
 
 class TestCRMConnector(unittest.TestCase):
+    # Create a connector pointed at the test API address.
     def setUp(self):
         self.connector = CRMConnector("https://crm.example.com/")
 
+    # Build a fake response containing the supplied data.
     def make_response(self, payload):
         response = MagicMock()
         response.json.return_value = payload
         return response
 
     @patch("requests.get")
+    # Confirm a customer is returned and the request has a timeout.
     def test_get_customer_returns_customer_and_uses_timeout(self, get):
         response = self.make_response(
             {"id": 42, "name": "Ada Lovelace", "email": "ada@example.com"}
@@ -86,6 +91,7 @@ class TestCRMConnector(unittest.TestCase):
         response.raise_for_status.assert_called_once_with()
 
     @patch("requests.get")
+    # Confirm HTTP errors are passed back without parsing a response.
     def test_get_customer_propagates_http_errors(self, get):
         response = self.make_response({})
         error = requests.exceptions.HTTPError("server error")
@@ -99,6 +105,7 @@ class TestCRMConnector(unittest.TestCase):
         response.json.assert_not_called()
 
     @patch("requests.get")
+    # Confirm invalid JSON is reported as invalid customer data.
     def test_get_customer_rejects_invalid_json(self, get):
         response = self.make_response({})
         response.json.side_effect = requests.exceptions.JSONDecodeError(
@@ -112,6 +119,7 @@ class TestCRMConnector(unittest.TestCase):
             self.connector.get_customer(42)
 
     @patch("requests.get")
+    # Confirm missing, mismatched, or invalid customer fields are rejected.
     def test_get_customer_rejects_invalid_customer_data(self, get):
         invalid_payloads = [
             ([], "Expected the API response to be a customer object"),
